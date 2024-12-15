@@ -94,6 +94,14 @@ const formatsByLang: Record<Lang, string[]> = {
     'EEEE d MMMM yyyy HH:mm',
     "yyyy-MM-dd'T'HH:mm:ss",
   ],
+  ptBR: [
+    defaultFormat,
+    'dd/MM/yyyy HH:mm',
+    'd de MMMM de yyyy  HH:mm',
+    'd de MMMM de yyyy  HH:mm',
+    'EEEE d MMMM yyyy HH:mm',
+    "yyyy-MM-dd'T'HH:mm:ss",
+  ],
 };
 
 const icon = createSvgStr(CalendarClock);

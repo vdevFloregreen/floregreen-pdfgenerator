@@ -58,6 +58,7 @@ function App() {
             theme: {
               token: {
                 colorPrimary: '#25c2a0',
+                borderRadius: 12,
               },
             },
             icons: {
@@ -140,7 +141,7 @@ function App() {
         </label>
         <span style={{ margin: "0 1rem" }}>/</span>
         <label>
-          Lang:{" "}
+          Language:{" "}
           <select onChange={(e) => {
             setLang(e.target.value as Lang)
             if (designer.current) {

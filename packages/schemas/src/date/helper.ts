@@ -11,8 +11,9 @@ import localeIt from 'air-datepicker/locale/it';
 import localeDe from 'air-datepicker/locale/de';
 import localeEs from 'air-datepicker/locale/es';
 import localeFr from 'air-datepicker/locale/fr';
+import localePtBR from 'air-datepicker/locale/pt-BR';
 import { format } from 'date-fns';
-import { enUS, zhCN, ja, ko, ar, th, pl, it, de, es, fr, Locale } from 'date-fns/locale';
+import { enUS, zhCN, ja, ko, ar, th, pl, it, de, es, fr, ptBR, Locale } from 'date-fns/locale';
 import {
   Lang,
   Plugin,
@@ -57,7 +58,7 @@ const injectStyles = (css: string) => {
 };
 
 const getDateFnsLocale = (lang: Lang): Locale | undefined =>
-  ({ en: enUS, zh: zhCN, ja, ko, ar, th, pl, it, de, es, fr }[lang]);
+  ({ en: enUS, zh: zhCN, ja, ko, ar, th, pl, it, de, es, fr, ptBR }[lang]);
 
 const getAirDatepickerLocale = (lang: Lang): AirDatepickerLocale | undefined =>
   ({
@@ -72,6 +73,7 @@ const getAirDatepickerLocale = (lang: Lang): AirDatepickerLocale | undefined =>
     de: localeDe,
     es: localeEs,
     fr: localeFr,
+    ptBR: localePtBR
   }[lang]);
 
 const strDateToDate = (strDate: string, type: 'date' | 'time' | 'dateTime'): Date => {

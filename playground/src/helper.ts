@@ -159,6 +159,7 @@ export const translations: { label: string; value: string }[] = [
   { value: 'de', label: 'German' },
   { value: 'fr', label: 'French' },
   { value: 'es', label: 'Spanish' },
+  { value: 'ptBR', label: 'Brazilian Portuguese' },
 ];
 
 export const generatePDF = async (currentRef: Designer | Form | Viewer | null) => {

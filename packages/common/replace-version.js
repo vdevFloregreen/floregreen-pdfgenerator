@@ -3,7 +3,18 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 try {
-  const gitTag = execSync('git describe --tags $(git rev-list --tags --max-count=1)', { encoding: 'utf8' }).trim();
+  let gitTag = '5.2.0'; // Default version
+
+  try {
+    // Try to get the short commit hash as a fallback
+    const commitHash = execSync('git rev-parse --short HEAD', { encoding: 'utf8' }).trim();
+    
+    if (commitHash) {
+      gitTag = `5.2.0-${commitHash}`;
+    }
+  } catch (gitError) {
+    console.warn('Could not retrieve Git commit hash, using default version', gitError);
+  }
 
   const filePath = path.join(__dirname, 'src/constants.ts');
 

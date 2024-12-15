@@ -47,6 +47,7 @@ const formatsByLang: Record<Lang, string[]> = {
     'yyyy-MM-dd',
   ],
   fr: [defaultFormat, 'dd/MM/yyyy', 'd MMMM yyyy', 'd MMM yyyy', 'EEEE d MMMM yyyy', 'yyyy-MM-dd'],
+  ptBR: [defaultFormat, 'dd/MM/yyyy', 'dd de MMMM de yyyy', 'dd de MMM de yyyy', 'EEEE d MMMM yyyy', 'yyyy-MM-dd'],
 };
 
 const icon = createSvgStr(Calendar);

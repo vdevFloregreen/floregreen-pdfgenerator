@@ -19,6 +19,7 @@ const formatsByLang: Record<Lang, string[]> = {
   de: [defaultFormat, 'HH.mm', 'HH:mm:ss'],
   es: [defaultFormat, 'hh:mm a', 'HH:mm:ss'],
   fr: [defaultFormat, 'HH:mm:ss'],
+  ptBR: [defaultFormat, 'HH:mm:ss'],
 };
 
 const icon = createSvgStr(Clock);
